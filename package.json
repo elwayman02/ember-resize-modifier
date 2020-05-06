@@ -1,13 +1,16 @@
 {
   "name": "ember-resize-modifier",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Resize Modifier for Ember.js Applications using ResizeObserver",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "modifier",
+    "modifiers",
+    "resize"
   ],
   "repository": "https://github.com/elwayman02/ember-resize-modifier",
   "license": "MIT",
-  "author": "",
+  "author": "Jordan Hawker <hawker.jordan@gmail.com> (http://www.JordanHawker.com)",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -24,7 +27,8 @@
   },
   "dependencies": {
     "ember-cli-babel": "^7.19.0",
-    "ember-cli-htmlbars": "^4.3.1"
+    "ember-cli-htmlbars": "^4.3.1",
+    "ember-modifier": "^1.0.3"
   },
   "devDependencies": {
     "@ember/optional-features": "^1.3.0",
@@ -69,8 +73,10 @@
     "edition": "octane"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "demoURL": "https://ember-resize-modifier.jhawk.co/"
   },
+  "homepage": "https://ember-resize-modifier.jhawk.co/",
   "release-it": {
     "plugins": {
       "release-it-lerna-changelog": {
