@@ -1,5 +1,6 @@
 ember-resize-modifier
 ==============================================================================
+[![Build Status](https://travis-ci.com/elwayman02/ember-resize-modifier.svg?branch=master)](https://travis-ci.com/elwayman02/ember-resize-modifier)
 
 Resize Modifier for Ember.js Applications using ResizeObserver.
 
