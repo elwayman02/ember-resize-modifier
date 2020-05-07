@@ -9,26 +9,35 @@ export default class DidIntersectModifier extends Modifier {
 
   observe() {
     if ('ResizeObserver' in window) {
-      this.observer = new ResizeObserver((entries) => {
-        this.handler(entries[0]);
+      this.observer = new ResizeObserver((entries, observer) => {
+        this.handler(entries[0], observer);
       });
 
-      this.observer.observe(this.element);
+      this.observer.observe(this.element, this.options);
     }
   }
 
+  unobserve() {
+    if (this.observer) {
+      this.observer.disconnect();
+    }
+  }
+
+  didUpdateArguments() {
+    this.unobserve();
+  }
+
   didReceiveArguments() {
-    let [handler] = this.args.positional;
+    let [handler, options] = this.args.positional;
 
     // Save arguments for when we need them
     this.handler = handler;
+    this.options = options || {};
 
     this.observe();
   }
 
   willRemove() {
-    if (this.observer) {
-      this.observer.disconnect();
-    }
+    this.unobserve();
   }
 }
