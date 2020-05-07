@@ -3,6 +3,7 @@ import Modifier from 'ember-modifier';
 export default class DidResizeModifier extends Modifier {
   // Public API
   handler = null;
+  options = {};
 
   // Private API
   observer = null;
@@ -32,7 +33,7 @@ export default class DidResizeModifier extends Modifier {
 
     // Save arguments for when we need them
     this.handler = handler;
-    this.options = options || {};
+    this.options = options || this.options;
 
     this.observe();
   }
