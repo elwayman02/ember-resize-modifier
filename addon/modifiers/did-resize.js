@@ -1,6 +1,6 @@
 import Modifier from 'ember-modifier';
 
-export default class DidIntersectModifier extends Modifier {
+export default class DidResizeModifier extends Modifier {
   // Public API
   handler = null;
 
