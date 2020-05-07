@@ -28,14 +28,9 @@ module('Integration | Modifier | did-resize', function (hooks) {
       disconnect = disconnectStub;
     }
 
-    resizeObserver = window.ResizeObserver;
-    window.ResizeObserver = MockResizeObserver;
+    sinon.replace(window, 'ResizeObserver', MockResizeObserver)
 
     this.resizeStub = sinon.stub();
-  });
-
-  hooks.afterEach(function () {
-    window.ResizeObserver = resizeObserver;
   });
 
   test('modifier integrates with ResizeObserver', async function (assert) {
