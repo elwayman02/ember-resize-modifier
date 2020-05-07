@@ -11,5 +11,5 @@ MDN actually lists ResizeObserverEntry as [unsupported by Safari](https://canius
 but this is incorrect and we have logged an issue with MDN to fix their data. We have tested this in 
 the latest Safari and confirmed that it in fact works as expected.
 
-In browsers where ResizeObserver is not supported, this modifer becomes a no-op. It will not error, 
+In browsers where ResizeObserver is not supported, this modifier becomes a no-op. It will not error, 
 nor will it employ a fallback. Features built with this addon will simply gracefully not respond to resize events.
