@@ -71,4 +71,13 @@ module('Integration | Modifier | did-resize', function (hooks) {
     assert.ok(element, 'element was passed to observe');
     assert.equal(options, this.options, 'options were correctly passed');
   });
+
+  test('modifier graceful no-op if ResizeObserver does not exist', async function (assert) {
+    delete window.ResizeObserver;
+
+    await render(hbs`<div {{did-resize this.resizeStub}}></div>`);
+
+    assert.notOk(resizeCallback, 'no callback received');
+    assert.notOk(observeStub.calledOnce, 'observe was not called');
+  });
 });
