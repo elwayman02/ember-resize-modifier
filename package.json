@@ -55,7 +55,7 @@
     "ember-template-lint": "^2.6.0",
     "ember-try": "^1.4.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-ember": "^8.5.0",
+    "eslint-plugin-ember": "^8.5.1",
     "eslint-plugin-node": "^11.1.0",
     "field-guide": "^1.0.4",
     "field-guide-default-template": "^1.2.0",
