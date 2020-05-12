@@ -1,7 +1,14 @@
 # Ember-Resize-Modifier
 
 This addon provides a [`did-resize`](modifiers/did-resize) modifier for detecting 
-resize events on the element or component it's attached to.
+resize events on the element or component it's attached to. These events could include window resizing 
+CSS changes, content updates, and more!
+
+## Installation
+
+```bash{data-execute=false}
+ember install ember-resize-modifier
+```
 
 ## Browser Support
 
