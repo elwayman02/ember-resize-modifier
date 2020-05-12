@@ -1,3 +1,16 @@
+## v0.0.2 (2020-05-12)
+
+#### :memo: Documentation
+* [#24](https://github.com/elwayman02/ember-resize-modifier/pull/24) Add install instructions to docs ([@elwayman02](https://github.com/elwayman02))
+
+#### :house: Internal
+* [#25](https://github.com/elwayman02/ember-resize-modifier/pull/25) did-resize Refactoring ([@elwayman02](https://github.com/elwayman02))
+* [#22](https://github.com/elwayman02/ember-resize-modifier/pull/22) Set launchEditor to false ([@elwayman02](https://github.com/elwayman02))
+
+#### Committers: 2
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v0.0.1 (2020-05-11)
 
 #### :rocket: Enhancement
