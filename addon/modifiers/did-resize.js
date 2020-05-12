@@ -9,21 +9,24 @@ export default class DidResizeModifier extends Modifier {
   observer = null;
 
   observe() {
-    if ('ResizeObserver' in window) {
-      this.observer = new ResizeObserver((entries, observer) => {
-        this.handler(entries[0], observer);
-      });
-
+    if (this.observer) {
       this.observer.observe(this.element, this.options);
     }
   }
 
   unobserve() {
     if (this.observer) {
+      this.observer.unobserve();
+    }
+  }
+
+  disconnect() {
+    if (this.observer) {
       this.observer.disconnect();
     }
   }
 
+  // Stop observing temporarily on update in case options have changed
   didUpdateArguments() {
     this.unobserve();
   }
@@ -38,7 +41,19 @@ export default class DidResizeModifier extends Modifier {
     this.observe();
   }
 
+  didInstall() {
+    if (!('ResizeObserver' in window)) {
+      return;
+    }
+
+    this.observer = new ResizeObserver((entries, observer) => {
+      this.handler(entries[0], observer);
+    });
+
+    this.observe();
+  }
+
   willRemove() {
-    this.unobserve();
+    this.disconnect();
   }
 }
