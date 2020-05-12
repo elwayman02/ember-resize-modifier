@@ -6,6 +6,7 @@ import sinon from 'sinon';
 
 let resizeCallback;
 let observeStub;
+let unobserveStub;
 let disconnectStub;
 let MockResizeObserver;
 
@@ -17,6 +18,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
   hooks.beforeEach(function () {
     resizeCallback = null;
     observeStub = sinon.stub();
+    unobserveStub = sinon.stub();
     disconnectStub = sinon.stub();
 
     MockResizeObserver = class MockResizeObserver {
@@ -25,6 +27,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
       }
 
       observe = observeStub;
+      unobserve = unobserveStub;
       disconnect = disconnectStub;
     }
 
@@ -79,5 +82,17 @@ module('Integration | Modifier | did-resize', function (hooks) {
 
     assert.notOk(resizeCallback, 'no callback received');
     assert.notOk(observeStub.calledOnce, 'observe was not called');
+  });
+
+  test('modifier calls unobserve when arguments change', async function (assert) {
+    await render(hbs`<div {{did-resize this.resizeStub}}></div>`);
+
+    assert.notOk(unobserveStub.called, 'unobserve not called yet');
+    assert.ok(observeStub.calledOnce, 'observe was called');
+
+    this.set('resizeStub', sinon.stub());
+
+    assert.ok(unobserveStub.calledOnce, 'unobserve called');
+    assert.ok(observeStub.calledTwice, 'observe was called again');
   });
 });
