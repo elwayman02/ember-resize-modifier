@@ -6121,10 +6121,10 @@ field-guide-default-template@^1.2.0:
     ember-cli-babel "^7.7.3"
     ember-cli-htmlbars "^3.0.1"
 
-field-guide@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/field-guide/-/field-guide-1.0.4.tgz#99a15a981884defd1acf2873a9fc7e3fe133e9ce"
-  integrity sha512-8T7cOTO2/nRNdBHQpcBs1NwbT/qNX4Dl02lblym4ZkMmHSGP2JTDuu0xGuZIWRptKasvujokVf9rG3vx+kAaGA==
+field-guide@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/field-guide/-/field-guide-1.1.0.tgz#96235a546a3e552a1c0ae1c0a43e50e250cf35ef"
+  integrity sha512-qlTMv7vlkGGFD7W2xGOLQcxuK0S6m13BGbjOMZTAkD+9db7QiS3WWochDvDtMLOZBjc6OBzsTB4FxX1Sap7ynw==
   dependencies:
     broccoli-funnel "^2.0.2"
     broccoli-merge-trees "^3.0.2"
