@@ -23,6 +23,10 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    fastboot: {
+      hostWhitelist: ['ember-resize-modifier.jhawk.co', /(.*)blissful-bell-745374.netlify.app/, /^localhost:\d+$/]
+    },
+
     'field-guide': {
       name: 'Ember Resize Modifier',
       copyright: 'Copyright (c) 2020 Jordan Hawker',
