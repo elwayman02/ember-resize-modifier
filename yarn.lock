@@ -5931,10 +5931,10 @@ emojis-list@^3.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
 
-empress-blueprint-helpers@^1.0.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/empress-blueprint-helpers/-/empress-blueprint-helpers-1.2.0.tgz#af236dbc4af1cbfe28b5e8bd0908aeb473baaa50"
-  integrity sha512-gDuaph4TZIB04MqXmI1WIYZgcPTKG5+2g3tI5rg2dLNizA4JmnV7soSklsW9YF8UuMcZHD1KK7p9sPO7YzguOg==
+empress-blueprint-helpers@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/empress-blueprint-helpers/-/empress-blueprint-helpers-1.2.1.tgz#ea0c3c5fb5b2ebc4fd0c0782711154915e2e96ee"
+  integrity sha512-4MCS9uOoo6iOr1IdJ3I6AYCKVhV6V9eK8MeU50kIEm2+SA7qPti4+gQ9iAlNc0JIewAbUw+vSsv3sIsdl0elbQ==
   dependencies:
     recast "^0.18.5"
 
@@ -6625,10 +6625,10 @@ field-guide-default-template@^1.3.0:
     ember-cli-babel "^7.7.3"
     ember-cli-htmlbars "^3.0.1"
 
-field-guide@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/field-guide/-/field-guide-1.2.0.tgz#31ead906e37f5628331f9f2e085ed3d592dc710b"
-  integrity sha512-EdOjjoe5sdhA8GG6Ler9Wv38x96L7rvdjZP5ZYxeQi38XGmrGiIu5lwGjdToz8Ra4QchejIiFVSRjWCVrYV9MQ==
+field-guide@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/field-guide/-/field-guide-1.3.0.tgz#5f83da985faebadd3018654923b16303a897090d"
+  integrity sha512-fTQ8oTqqW55Xyh9lIjQZDQYQn0DL6zbKUmgu1x50kTT7OCvbtva7Fe1dcj/dstoTGzZaPU19kRyIa3s3Ez7O9w==
   dependencies:
     broccoli-funnel "^2.0.2"
     broccoli-merge-trees "^3.0.2"
@@ -6639,7 +6639,7 @@ field-guide@^1.2.0:
     ember-cli-string-utils "^1.1.0"
     ember-get-config "^0.2.4"
     ember-prism "^0.4.0"
-    empress-blueprint-helpers "^1.0.0"
+    empress-blueprint-helpers "^1.2.1"
     resolve "^1.11.0"
     walk-sync "^1.1.3"
 
