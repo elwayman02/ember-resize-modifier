@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'dummy',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'trailing-history',
 
     EmberENV: {
       FEATURES: {
@@ -31,7 +31,9 @@ module.exports = function(environment) {
       name: 'Ember Resize Modifier',
       copyright: 'Copyright (c) 2020 Jordan Hawker',
       github: 'https://github.com/elwayman02/ember-resize-modifier'
-    }
+    },
+
+    historySupportMiddleware: true
   };
 
   if (environment === 'development') {

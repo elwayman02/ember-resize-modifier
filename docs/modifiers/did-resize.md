@@ -19,6 +19,12 @@ and the [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/Resize
   }
 ```
 
+Here is an example of using the `did-resize` modifier to increment a counter every time the containing `<div>` has been resized:
+
+```handlebars
+<div {{did-resize this.onResize}}>I have been resized {{count}} times!</div>
+```
+
 ## Advanced Usage
 
 `did-resize` also supports passing an `options` hash into ResizeObserver:
