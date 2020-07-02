@@ -10344,10 +10344,10 @@ prelude-ls@~1.1.2:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
   integrity sha1-IZMqVJ9eUv/ZqCf1cOBL5iqX2lQ=
 
-prember@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.4.tgz#1218369e5d3baef0ce1a9f05341476c9ae4b30dc"
-  integrity sha512-eqY65zIimju84/rD4hGtKALtH0vZwc9uhNHO5yHm4QvCUgLdTcB++mplFRUMnfJPnIa3bLUyac2tBTFxYp37WA==
+prember@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/prember/-/prember-1.0.5.tgz#1f6644fb08a5b6902e2ec489f26086672f81a26a"
+  integrity sha512-+Yf6vJhcmig8rMDabToRk1Q2x4g+yKXiZJPOD3XZ5fvknQuM/LsXM+BHXVqGQwgBuXI7353wesoZBC1HXpWdYA==
   dependencies:
     broccoli-debug "^0.6.3"
     broccoli-merge-trees "^2.0.0"
