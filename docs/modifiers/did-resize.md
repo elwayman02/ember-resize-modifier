@@ -13,7 +13,7 @@ A callback handler is always expected to be passed to `did-resize`:
 The handler will be called with an instance of [ResizeObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserverEntry)
 and the [ResizeObserver](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver/ResizeObserver) instance itself:
 
-```javascript{data-execute=false}
+```javascript
   onResize(entry, observer) {
     // do something
   }

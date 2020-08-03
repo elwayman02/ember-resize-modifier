@@ -6,7 +6,7 @@ CSS changes, content updates, and more!
 
 ## Installation
 
-```bash{data-execute=false}
+```bash
 ember install ember-resize-modifier
 ```
 
@@ -20,3 +20,5 @@ the latest Safari and confirmed that it in fact works as expected.
 
 In browsers where ResizeObserver is not supported, this modifier becomes a no-op. It will not error, 
 nor will it employ a fallback. Features built with this addon will simply gracefully not respond to resize events.
+
+[![Powered By Netlify](https://www.netlify.com/img/global/badges/netlify-light.svg)](https://www.netlify.com)
