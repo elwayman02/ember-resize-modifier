@@ -1,6 +1,6 @@
 {
   "name": "ember-resize-modifier",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Resize Modifier for Ember.js Applications using ResizeObserver",
   "keywords": [
     "ember-addon",
