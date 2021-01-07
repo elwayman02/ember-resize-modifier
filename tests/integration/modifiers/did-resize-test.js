@@ -29,7 +29,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
       observe = observeStub;
       unobserve = unobserveStub;
       disconnect = disconnectStub;
-    }
+    };
 
     resizeObserver = window.ResizeObserver;
     window.ResizeObserver = MockResizeObserver;
@@ -50,7 +50,11 @@ module('Integration | Modifier | did-resize', function (hooks) {
     let [element, options] = observeStub.args[0];
 
     assert.ok(element, 'element was passed to observe');
-    assert.equal(Object.keys(options).length, 0, 'empty object passed as default options');
+    assert.equal(
+      Object.keys(options).length,
+      0,
+      'empty object passed as default options'
+    );
   });
 
   test('modifier triggers handler when ResizeObserver fires callback', async function (assert) {
@@ -61,7 +65,10 @@ module('Integration | Modifier | did-resize', function (hooks) {
 
     resizeCallback([fakeEntry], fakeObserver);
 
-    assert.ok(this.resizeStub.calledOnceWith(fakeEntry, fakeObserver), 'handler fired with correct parameters');
+    assert.ok(
+      this.resizeStub.calledOnceWith(fakeEntry, fakeObserver),
+      'handler fired with correct parameters'
+    );
   });
 
   test('modifier passes options to ResizeObserver', async function (assert) {

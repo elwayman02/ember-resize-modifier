@@ -24,16 +24,20 @@ module.exports = function (environment) {
     },
 
     fastboot: {
-      hostWhitelist: ['ember-resize-modifier.jhawk.co', /(.*)blissful-bell-745374.netlify.app/, /^localhost:\d+$/]
+      hostWhitelist: [
+        'ember-resize-modifier.jhawk.co',
+        /(.*)blissful-bell-745374.netlify.app/,
+        /^localhost:\d+$/,
+      ],
     },
 
     'field-guide': {
       name: 'Ember Resize Modifier',
       copyright: 'Copyright (c) 2020 Jordan Hawker',
-      github: 'https://github.com/elwayman02/ember-resize-modifier'
+      github: 'https://github.com/elwayman02/ember-resize-modifier',
     },
 
-    historySupportMiddleware: true
+    historySupportMiddleware: true,
   };
 
   if (environment === 'development') {
