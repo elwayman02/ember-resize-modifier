@@ -6,23 +6,41 @@ export default class DidResizeModifier extends Modifier {
   options = {};
 
   // Private API
-  observer = null;
+  _didInstall = false;
+  static observer = null;
+  static handlers = [];
+
+  addHandler() {
+    DidResizeModifier.handlers.push({
+      element: this.element,
+      handler: this.handler,
+    });
+  }
+
+  removeHandler() {
+    DidResizeModifier.handlers.splice(
+      DidResizeModifier.handlers.findIndex((h) => h.element === this.element),
+      1
+    );
+  }
 
   observe() {
-    if (this.observer) {
-      this.observer.observe(this.element, this.options);
+    if (DidResizeModifier.observer) {
+      this.addHandler();
+      DidResizeModifier.observer.observe(this.element, this.options);
     }
   }
 
   unobserve() {
-    if (this.observer) {
-      this.observer.unobserve();
+    if (DidResizeModifier.observer) {
+      DidResizeModifier.observer.unobserve(this.element);
     }
   }
 
   disconnect() {
-    if (this.observer) {
-      this.observer.disconnect();
+    if (DidResizeModifier.observer) {
+      DidResizeModifier.observer.disconnect();
+      this.removeHandler();
     }
   }
 
@@ -38,7 +56,10 @@ export default class DidResizeModifier extends Modifier {
     this.handler = handler;
     this.options = options || this.options;
 
-    this.observe();
+    // Only observe if the modifier is installed
+    if (this._didInstall) {
+      this.observe();
+    }
   }
 
   didInstall() {
@@ -46,11 +67,19 @@ export default class DidResizeModifier extends Modifier {
       return;
     }
 
-    this.observer = new ResizeObserver((entries, observer) => {
-      this.handler(entries[0], observer);
-    });
+    if (!DidResizeModifier.observer) {
+      DidResizeModifier.observer = new ResizeObserver((entries, observer) => {
+        for (let entry of entries) {
+          const lookup = DidResizeModifier.handlers.find(
+            (h) => h.element === entry.target
+          );
+          if (lookup) lookup.handler(entry, observer);
+        }
+      });
+    }
 
     this.observe();
+    this._didInstall = true;
   }
 
   willRemove() {

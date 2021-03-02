@@ -1,40 +1,33 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { find, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import sinon from 'sinon';
-
-let resizeCallback;
-let observeStub;
-let unobserveStub;
-let disconnectStub;
-let MockResizeObserver;
 
 module('Integration | Modifier | did-resize', function (hooks) {
   setupRenderingTest(hooks);
 
-  let resizeObserver;
+  let resizeCallback = null;
+  const observeStub = sinon.stub();
+  const unobserveStub = sinon.stub();
+  const disconnectStub = sinon.stub();
+  const resizeObserver = window.ResizeObserver;
+  const mockResizeObserver = class MockResizeObserver {
+    constructor(callback) {
+      resizeCallback = callback;
+    }
+
+    observe = observeStub;
+    unobserve = unobserveStub;
+    disconnect = disconnectStub;
+  };
 
   hooks.beforeEach(function () {
-    resizeCallback = null;
-    observeStub = sinon.stub();
-    unobserveStub = sinon.stub();
-    disconnectStub = sinon.stub();
-
-    MockResizeObserver = class MockResizeObserver {
-      constructor(callback) {
-        resizeCallback = callback;
-      }
-
-      observe = observeStub;
-      unobserve = unobserveStub;
-      disconnect = disconnectStub;
-    };
-
-    resizeObserver = window.ResizeObserver;
-    window.ResizeObserver = MockResizeObserver;
-
+    observeStub.reset();
+    unobserveStub.reset();
+    disconnectStub.reset();
     this.resizeStub = sinon.stub();
+    window.ResizeObserver = mockResizeObserver;
   });
 
   hooks.afterEach(function () {
@@ -58,15 +51,16 @@ module('Integration | Modifier | did-resize', function (hooks) {
   });
 
   test('modifier triggers handler when ResizeObserver fires callback', async function (assert) {
-    await render(hbs`<div {{did-resize this.resizeStub}}></div>`);
-
-    let fakeEntry = { target: {} };
+    await render(
+      hbs`<div id="test-element" {{did-resize this.resizeStub}}></div>`
+    );
+    let entry = { target: find('#test-element') };
     let fakeObserver = { observe: {} };
 
-    resizeCallback([fakeEntry], fakeObserver);
+    resizeCallback([entry], fakeObserver);
 
     assert.ok(
-      this.resizeStub.calledOnceWith(fakeEntry, fakeObserver),
+      this.resizeStub.calledOnceWith(entry, fakeObserver),
       'handler fired with correct parameters'
     );
   });
@@ -87,7 +81,6 @@ module('Integration | Modifier | did-resize', function (hooks) {
 
     await render(hbs`<div {{did-resize this.resizeStub}}></div>`);
 
-    assert.notOk(resizeCallback, 'no callback received');
     assert.notOk(observeStub.calledOnce, 'observe was not called');
   });
 
