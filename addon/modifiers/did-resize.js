@@ -6,22 +6,33 @@ export default class DidResizeModifier extends Modifier {
   options = {};
 
   // Private API
-  _didInstall = false;
   static observer = null;
-  static handlers = [];
+  static handlers = null;
+
+  constructor() {
+    super(...arguments);
+
+    if (!('ResizeObserver' in window)) {
+      return;
+    }
+
+    if (!DidResizeModifier.observer) {
+      DidResizeModifier.handlers = new WeakMap();
+      DidResizeModifier.observer = new ResizeObserver((entries, observer) => {
+        for (let entry of entries) {
+          const handler = DidResizeModifier.handlers.get(entry.target);
+          if (handler) handler(entry, observer);
+        }
+      });
+    }
+  }
 
   addHandler() {
-    DidResizeModifier.handlers.push({
-      element: this.element,
-      handler: this.handler,
-    });
+    DidResizeModifier.handlers.set(this.element, this.handler);
   }
 
   removeHandler() {
-    DidResizeModifier.handlers.splice(
-      DidResizeModifier.handlers.findIndex((h) => h.element === this.element),
-      1
-    );
+    DidResizeModifier.handlers.delete(this.element);
   }
 
   observe() {
@@ -34,12 +45,6 @@ export default class DidResizeModifier extends Modifier {
   unobserve() {
     if (DidResizeModifier.observer) {
       DidResizeModifier.observer.unobserve(this.element);
-    }
-  }
-
-  disconnect() {
-    if (DidResizeModifier.observer) {
-      DidResizeModifier.observer.disconnect();
       this.removeHandler();
     }
   }
@@ -56,33 +61,10 @@ export default class DidResizeModifier extends Modifier {
     this.handler = handler;
     this.options = options || this.options;
 
-    // Only observe if the modifier is installed
-    if (this._didInstall) {
-      this.observe();
-    }
-  }
-
-  didInstall() {
-    if (!('ResizeObserver' in window)) {
-      return;
-    }
-
-    if (!DidResizeModifier.observer) {
-      DidResizeModifier.observer = new ResizeObserver((entries, observer) => {
-        for (let entry of entries) {
-          const lookup = DidResizeModifier.handlers.find(
-            (h) => h.element === entry.target
-          );
-          if (lookup) lookup.handler(entry, observer);
-        }
-      });
-    }
-
     this.observe();
-    this._didInstall = true;
   }
 
   willRemove() {
-    this.disconnect();
+    this.unobserve();
   }
 }

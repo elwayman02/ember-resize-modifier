@@ -3,16 +3,17 @@ import { setupRenderingTest } from 'ember-qunit';
 import { find, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import sinon from 'sinon';
+import DidResizeModifier from 'ember-resize-modifier/modifiers/did-resize';
 
 module('Integration | Modifier | did-resize', function (hooks) {
   setupRenderingTest(hooks);
 
   let resizeCallback = null;
-  const observeStub = sinon.stub();
-  const unobserveStub = sinon.stub();
-  const disconnectStub = sinon.stub();
-  const resizeObserver = window.ResizeObserver;
-  const mockResizeObserver = class MockResizeObserver {
+  let observeStub = sinon.stub();
+  let unobserveStub = sinon.stub();
+  let disconnectStub = sinon.stub();
+  let resizeObserver = window.ResizeObserver;
+  let mockResizeObserver = class MockResizeObserver {
     constructor(callback) {
       resizeCallback = callback;
     }
@@ -28,6 +29,11 @@ module('Integration | Modifier | did-resize', function (hooks) {
     disconnectStub.reset();
     this.resizeStub = sinon.stub();
     window.ResizeObserver = mockResizeObserver;
+
+    // reset static properties to make sure every test case runs independently
+    DidResizeModifier.observer = null;
+    DidResizeModifier.handlers = null;
+    resizeCallback = null;
   });
 
   hooks.afterEach(function () {
@@ -80,7 +86,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
     delete window.ResizeObserver;
 
     await render(hbs`<div {{did-resize this.resizeStub}}></div>`);
-
+    assert.notOk(resizeCallback, 'no callback received');
     assert.notOk(observeStub.calledOnce, 'observe was not called');
   });
 
