@@ -2,6 +2,20 @@ Version 9 of Highlight.js has reached EOL and is no longer supported.
 Please upgrade or ask whatever dependency you are using to upgrade.
 https://github.com/highlightjs/highlight.js/issues/2877
 
+Version 9 of Highlight.js has reached EOL and is no longer supported.
+Please upgrade or ask whatever dependency you are using to upgrade.
+https://github.com/highlightjs/highlight.js/issues/2877
+
+## v0.2.0 (2021-03-03)
+
+#### :rocket: Enhancement
+* [#222](https://github.com/elwayman02/ember-resize-modifier/pull/222) Use single ResizeObserver for better performance ([@xjmdoo](https://github.com/xjmdoo))
+
+#### Committers: 3
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- Tamas Sule ([@xjmdoo](https://github.com/xjmdoo))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
 ## v0.1.0 (2021-01-07)
 
 #### :memo: Documentation
