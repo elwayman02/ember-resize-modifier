@@ -101,4 +101,52 @@ module('Integration | Modifier | did-resize', function (hooks) {
     assert.ok(unobserveStub.calledOnce, 'unobserve called');
     assert.ok(observeStub.calledTwice, 'observe was called again');
   });
+
+  test('handlers are setup and called correctly when multiple modifiers are present', async function (assert) {
+    this.setProperties({
+      resizeStub2: sinon.stub(),
+      resizeStub3: sinon.stub(),
+    });
+
+    await render(
+      hbs`<div id="test-element1" {{did-resize this.resizeStub}}></div>
+        <div id="test-element2" {{did-resize this.resizeStub2}}></div>
+        <div id="test-element3" {{did-resize this.resizeStub3}}></div>`
+    );
+
+    let entries = ['#test-element1', '#test-element2', '#test-element3'].map(
+      (elementId) => {
+        return { target: find(elementId) };
+      }
+    );
+    let fakeObserver = { observe: {} };
+
+    // trigger resize on all elements
+    resizeCallback(entries, fakeObserver);
+
+    assert.ok(this.resizeStub.calledOnce, 'First handler was called only once');
+    assert.ok(
+      this.resizeStub2.calledOnce,
+      'Second handler was called only once'
+    );
+    assert.ok(
+      this.resizeStub3.calledOnce,
+      'Third handler was called only once'
+    );
+
+    // trigger resize only on the first element
+    resizeCallback([entries[0]], fakeObserver);
+    assert.ok(
+      this.resizeStub.calledTwice,
+      'First handler was called a second time'
+    );
+    assert.notOk(
+      this.resizeStub2.calledTwice,
+      'Second handler was not called a second time'
+    );
+    assert.notOk(
+      this.resizeStub3.calledTwice,
+      'Third handler was not called a second time'
+    );
+  });
 });
