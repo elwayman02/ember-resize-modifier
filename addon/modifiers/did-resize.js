@@ -6,23 +6,46 @@ export default class DidResizeModifier extends Modifier {
   options = {};
 
   // Private API
-  observer = null;
+  static observer = null;
+  static handlers = null;
+
+  constructor() {
+    super(...arguments);
+
+    if (!('ResizeObserver' in window)) {
+      return;
+    }
+
+    if (!DidResizeModifier.observer) {
+      DidResizeModifier.handlers = new WeakMap();
+      DidResizeModifier.observer = new ResizeObserver((entries, observer) => {
+        for (let entry of entries) {
+          const handler = DidResizeModifier.handlers.get(entry.target);
+          if (handler) handler(entry, observer);
+        }
+      });
+    }
+  }
+
+  addHandler() {
+    DidResizeModifier.handlers.set(this.element, this.handler);
+  }
+
+  removeHandler() {
+    DidResizeModifier.handlers.delete(this.element);
+  }
 
   observe() {
-    if (this.observer) {
-      this.observer.observe(this.element, this.options);
+    if (DidResizeModifier.observer) {
+      this.addHandler();
+      DidResizeModifier.observer.observe(this.element, this.options);
     }
   }
 
   unobserve() {
-    if (this.observer) {
-      this.observer.unobserve();
-    }
-  }
-
-  disconnect() {
-    if (this.observer) {
-      this.observer.disconnect();
+    if (DidResizeModifier.observer) {
+      DidResizeModifier.observer.unobserve(this.element);
+      this.removeHandler();
     }
   }
 
@@ -41,19 +64,7 @@ export default class DidResizeModifier extends Modifier {
     this.observe();
   }
 
-  didInstall() {
-    if (!('ResizeObserver' in window)) {
-      return;
-    }
-
-    this.observer = new ResizeObserver((entries, observer) => {
-      this.handler(entries[0], observer);
-    });
-
-    this.observe();
-  }
-
   willRemove() {
-    this.disconnect();
+    this.unobserve();
   }
 }
