@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { find, render } from '@ember/test-helpers';
+import { clearRender, find, render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import sinon from 'sinon';
 import DidResizeModifier from 'ember-resize-modifier/modifiers/did-resize';
@@ -147,6 +147,27 @@ module('Integration | Modifier | did-resize', function (hooks) {
     assert.notOk(
       this.resizeStub3.calledTwice,
       'Third handler was not called a second time'
+    );
+  });
+
+  test('element gets unobserved before removing from the DOM', async function (assert) {
+    await render(
+      hbs`<div id='test-element' {{did-resize this.resizeStub}}></div>`
+    );
+    let element = find('#test-element');
+    await clearRender();
+
+    assert.ok(
+      unobserveStub.calledOnceWith(element),
+      'unobserve is called with the HTMLElement of the modifier'
+    );
+
+    let entry = { target: element };
+    let fakeObserver = { observe: {} };
+    resizeCallback([entry], fakeObserver);
+    assert.notOk(
+      this.resizeStub.called,
+      'handler function is not called after element is removed from the DOM'
     );
   });
 });
