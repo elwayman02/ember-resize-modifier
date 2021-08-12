@@ -19,10 +19,12 @@ export default class DidResizeModifier extends Modifier {
     if (!DidResizeModifier.observer) {
       DidResizeModifier.handlers = new WeakMap();
       DidResizeModifier.observer = new ResizeObserver((entries, observer) => {
-        for (let entry of entries) {
-          const handler = DidResizeModifier.handlers.get(entry.target);
-          if (handler) handler(entry, observer);
-        }
+        window.requestAnimationFrame(() => {
+          for (let entry of entries) {
+            const handler = DidResizeModifier.handlers.get(entry.target);
+            if (handler) handler(entry, observer);
+          }
+        });
       });
     }
   }
