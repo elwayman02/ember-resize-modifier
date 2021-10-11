@@ -10,12 +10,13 @@ Check out the [documentation](https://ember-resize-modifier.jhawk.co/)!
 
 We adhere to the [Ember Community Guidelines](https://emberjs.com/guidelines/) for our Code of Conduct.
 
+
 Compatibility
 ------------------------------------------------------------------------------
 
-* Ember.js v3.16 or above
-* Ember CLI v2.13 or above
-* Node.js v10 or above
+* Ember.js v3.20 or above
+* Ember CLI v3.20 or above
+* Node.js v12 or above
 * [All N-1 browsers except IE and Safari 13](https://caniuse.com/#search=resizeobserver)
 
 
@@ -25,6 +26,13 @@ Installation
 ```
 ember install ember-resize-modifier
 ```
+
+
+Usage
+------------------------------------------------------------------------------
+
+[Longer description of how to use the addon in apps.]
+
 
 Contributing
 ------------------------------------------------------------------------------
