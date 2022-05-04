@@ -1,8 +1,10 @@
 import Modifier from 'ember-modifier';
+import { registerDestructor } from '@ember/destroyable';
 
 export default class DidResizeModifier extends Modifier {
   // Public API
-  handler = null;
+  element;
+  handler;
   options = {};
 
   // Private API
@@ -19,20 +21,30 @@ export default class DidResizeModifier extends Modifier {
     if (!DidResizeModifier.observer) {
       DidResizeModifier.handlers = new WeakMap();
       DidResizeModifier.observer = new ResizeObserver((entries, observer) => {
-        for (let entry of entries) {
-          const handler = DidResizeModifier.handlers.get(entry.target);
-          if (handler) handler(entry, observer);
-        }
+        window.requestAnimationFrame(() => {
+          for (let entry of entries) {
+            const handler = DidResizeModifier.handlers.get(entry.target);
+            if (handler) handler(entry, observer);
+          }
+        });
       });
     }
+
+    registerDestructor(this, (instance) => instance.unobserve());
   }
 
-  addHandler() {
-    DidResizeModifier.handlers.set(this.element, this.handler);
-  }
+  modify(element, positional /*, named*/) {
+    this.unobserve();
 
-  removeHandler() {
-    DidResizeModifier.handlers.delete(this.element);
+    this.element = element;
+
+    const [handler, options] = positional;
+
+    // Save arguments for when we need them
+    this.handler = handler;
+    this.options = options || this.options;
+
+    this.observe();
   }
 
   observe() {
@@ -43,28 +55,17 @@ export default class DidResizeModifier extends Modifier {
   }
 
   unobserve() {
-    if (DidResizeModifier.observer) {
+    if (this.element && DidResizeModifier.observer) {
       DidResizeModifier.observer.unobserve(this.element);
       this.removeHandler();
     }
   }
 
-  // Stop observing temporarily on update in case options have changed
-  didUpdateArguments() {
-    this.unobserve();
+  addHandler() {
+    DidResizeModifier.handlers.set(this.element, this.handler);
   }
 
-  didReceiveArguments() {
-    let [handler, options] = this.args.positional;
-
-    // Save arguments for when we need them
-    this.handler = handler;
-    this.options = options || this.options;
-
-    this.observe();
-  }
-
-  willRemove() {
-    this.unobserve();
+  removeHandler() {
+    DidResizeModifier.handlers.delete(this.element);
   }
 }
