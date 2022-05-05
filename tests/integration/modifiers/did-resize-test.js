@@ -13,6 +13,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
   let unobserveStub = sinon.stub();
   let disconnectStub = sinon.stub();
   let resizeObserver = window.ResizeObserver;
+  let originalRequestAnimationFrame = window.requestAnimationFrame;
   let mockResizeObserver = class MockResizeObserver {
     constructor(callback) {
       resizeCallback = callback;
@@ -29,6 +30,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
     disconnectStub.reset();
     this.resizeStub = sinon.stub();
     window.ResizeObserver = mockResizeObserver;
+    window.requestAnimationFrame = (callback) => callback();
 
     // reset static properties to make sure every test case runs independently
     DidResizeModifier.observer = null;
@@ -38,6 +40,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
 
   hooks.afterEach(function () {
     window.ResizeObserver = resizeObserver;
+    window.requestAnimationFrame = originalRequestAnimationFrame;
   });
 
   test('modifier integrates with ResizeObserver', async function (assert) {
@@ -49,7 +52,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
     let [element, options] = observeStub.args[0];
 
     assert.ok(element, 'element was passed to observe');
-    assert.equal(
+    assert.strictEqual(
       Object.keys(options).length,
       0,
       'empty object passed as default options'
@@ -79,7 +82,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
     let [element, options] = observeStub.args[0];
 
     assert.ok(element, 'element was passed to observe');
-    assert.equal(options, this.options, 'options were correctly passed');
+    assert.deepEqual(options, this.options, 'options were correctly passed');
   });
 
   test('modifier graceful no-op if ResizeObserver does not exist', async function (assert) {
@@ -110,8 +113,8 @@ module('Integration | Modifier | did-resize', function (hooks) {
 
     await render(
       hbs`<div id="test-element1" {{did-resize this.resizeStub}}></div>
-        <div id="test-element2" {{did-resize this.resizeStub2}}></div>
-        <div id="test-element3" {{did-resize this.resizeStub3}}></div>`
+<div id="test-element2" {{did-resize this.resizeStub2}}></div>
+<div id="test-element3" {{did-resize this.resizeStub3}}></div>`
     );
 
     let entries = ['#test-element1', '#test-element2', '#test-element3'].map(
