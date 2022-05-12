@@ -60,13 +60,13 @@ jobs:
           - ember-classic
         experimental: [false]
         include:
-          - ember-try-scenario: ember-beta
+          - try-scenario: ember-beta
             experimental: true
-          - ember-try-scenario: ember-canary
+          - try-scenario: ember-canary
             experimental: true
-          - ember-try-scenario: embroider-safe
+          - try-scenario: embroider-safe
             experimental: true
-          - ember-try-scenario: embroider-optimized
+          - try-scenario: embroider-optimized
             experimental: true
 
     steps:
