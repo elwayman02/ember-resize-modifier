@@ -30,11 +30,11 @@ export default class DidResizeModifier extends Modifier {
       });
     }
 
-    registerDestructor(this, (instance) => instance.unobserve());
+    registerDestructor(this, unobserve);
   }
 
   modify(element, positional /*, named*/) {
-    this.unobserve();
+    unobserve(this);
 
     this.element = element;
 
@@ -54,18 +54,22 @@ export default class DidResizeModifier extends Modifier {
     }
   }
 
-  unobserve() {
-    if (this.element && DidResizeModifier.observer) {
-      DidResizeModifier.observer.unobserve(this.element);
-      this.removeHandler();
-    }
-  }
-
   addHandler() {
     DidResizeModifier.handlers.set(this.element, this.handler);
   }
 
   removeHandler() {
     DidResizeModifier.handlers.delete(this.element);
+  }
+}
+
+/**
+ *
+ * @param {DidResizeModifier} instance
+ */
+function unobserve(instance) {
+  if (instance.element && DidResizeModifier.observer) {
+    DidResizeModifier.observer.unobserve(instance.element);
+    instance.removeHandler();
   }
 }
