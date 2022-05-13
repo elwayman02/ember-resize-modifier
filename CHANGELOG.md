@@ -10,6 +10,19 @@ Version 9 of Highlight.js has reached EOL and is no longer supported.
 Please upgrade or ask whatever dependency you are using to upgrade.
 https://github.com/highlightjs/highlight.js/issues/2877
 
+
+## v0.4.0 (2022-05-13)
+
+#### :boom: Breaking Change
+* [#506](https://github.com/elwayman02/ember-resize-modifier/pull/506) Update ember-modifier to v3 ([@BnitoBzh](https://github.com/BnitoBzh))
+
+#### :house: Internal
+* [#506](https://github.com/elwayman02/ember-resize-modifier/pull/506) Update ember-modifier to v3 ([@BnitoBzh](https://github.com/BnitoBzh))
+
+#### Committers: 2
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- [@BnitoBzh](https://github.com/BnitoBzh)
+
 ## v0.3.0 (2021-10-11)
 
 #### :boom: Breaking Change
