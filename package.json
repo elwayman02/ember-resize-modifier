@@ -78,7 +78,7 @@
     "qunit-dom": "^2.0.0",
     "release-it": "^14.11.6",
     "release-it-lerna-changelog": "^4.0.0",
-    "sass": "^1.43.4",
+    "sass": "^1.52.1",
     "webpack": "^5.70.0"
   },
   "engines": {
