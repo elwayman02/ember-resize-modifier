@@ -1,5 +1,4 @@
-ember-resize-modifier
-==============================================================================
+# ember-resize-modifier
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ee8e9a44-3b73-4936-bc2a-e3beb84918d4/deploy-status)](https://app.netlify.com/sites/blissful-bell-745374/deploys)
 [![Build Status](https://travis-ci.com/elwayman02/ember-resize-modifier.svg?branch=master)](https://travis-ci.com/elwayman02/ember-resize-modifier)
@@ -11,36 +10,31 @@ Check out the [documentation](https://ember-resize-modifier.jhawk.co/)!
 We adhere to the [Ember Community Guidelines](https://emberjs.com/guidelines/) for our Code of Conduct.
 
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v3.24 or above
-* Ember CLI v3.24 or above
+* Ember.js v3.28 or above
+* Ember CLI v3.28 or above
 * Node.js v14 or above
 * [All N-1 browsers](https://caniuse.com/#search=resizeobserver)
 
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-resize-modifier
 ```
 
 
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 [Longer description of how to use the addon in apps.]
 
 
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
