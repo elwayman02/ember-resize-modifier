@@ -12,6 +12,19 @@ https://github.com/highlightjs/highlight.js/issues/2877
 
 
 
+
+## v0.5.0 (2022-12-08)
+
+#### :boom: Breaking Change
+* [#625](https://github.com/elwayman02/ember-resize-modifier/pull/625) Ember 4.9 Upgrade ([@elwayman02](https://github.com/elwayman02))
+
+#### :house: Internal
+* [#625](https://github.com/elwayman02/ember-resize-modifier/pull/625) Ember 4.9 Upgrade ([@elwayman02](https://github.com/elwayman02))
+* [#623](https://github.com/elwayman02/ember-resize-modifier/pull/623) ESLint v8 Upgrade ([@elwayman02](https://github.com/elwayman02))
+
+#### Committers: 1
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+
 ## v0.4.1 (2022-05-13)
 
 #### :rocket: Enhancement
