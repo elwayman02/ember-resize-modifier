@@ -13,6 +13,16 @@ https://github.com/highlightjs/highlight.js/issues/2877
 
 
 
+
+## v0.6.0 (2023-01-04)
+
+#### :boom: Breaking Change
+* [#632](https://github.com/elwayman02/ember-resize-modifier/pull/632) [skip netlify]: Bump ember-modifier from 3.2.7 to 4.0.0 ([@dependabot[bot]](https://github.com/apps/dependabot))
+* [#648](https://github.com/elwayman02/ember-resize-modifier/pull/648) Move ember-auto-import v2 to dep ([@elwayman02](https://github.com/elwayman02))
+
+#### Committers: 1
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+
 ## v0.5.0 (2022-12-08)
 
 #### :boom: Breaking Change
