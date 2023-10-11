@@ -76,7 +76,7 @@
     "qunit-dom": "^2.0.0",
     "release-it": "^15.11.0",
     "release-it-lerna-changelog": "^5.0.0",
-    "sass": "^1.62.1",
+    "sass": "^1.69.2",
     "webpack": "^5.88.2"
   },
   "peerDependencies": {
