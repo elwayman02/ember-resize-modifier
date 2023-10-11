@@ -55,13 +55,13 @@ module('Integration | Modifier | did-resize', function (hooks) {
     assert.strictEqual(
       Object.keys(options).length,
       0,
-      'empty object passed as default options'
+      'empty object passed as default options',
     );
   });
 
   test('modifier triggers handler when ResizeObserver fires callback', async function (assert) {
     await render(
-      hbs`<div id="test-element" {{did-resize this.resizeStub}}></div>`
+      hbs`<div id="test-element" {{did-resize this.resizeStub}}></div>`,
     );
     let entry = { target: find('#test-element') };
     let fakeObserver = { observe: {} };
@@ -70,7 +70,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
 
     assert.ok(
       this.resizeStub.calledOnceWith(entry, fakeObserver),
-      'handler fired with correct parameters'
+      'handler fired with correct parameters',
     );
   });
 
@@ -114,13 +114,13 @@ module('Integration | Modifier | did-resize', function (hooks) {
     await render(
       hbs`<div id="test-element1" {{did-resize this.resizeStub}}></div>
 <div id="test-element2" {{did-resize this.resizeStub2}}></div>
-<div id="test-element3" {{did-resize this.resizeStub3}}></div>`
+<div id="test-element3" {{did-resize this.resizeStub3}}></div>`,
     );
 
     let entries = ['#test-element1', '#test-element2', '#test-element3'].map(
       (elementId) => {
         return { target: find(elementId) };
-      }
+      },
     );
     let fakeObserver = { observe: {} };
 
@@ -130,39 +130,39 @@ module('Integration | Modifier | did-resize', function (hooks) {
     assert.ok(this.resizeStub.calledOnce, 'First handler was called only once');
     assert.ok(
       this.resizeStub2.calledOnce,
-      'Second handler was called only once'
+      'Second handler was called only once',
     );
     assert.ok(
       this.resizeStub3.calledOnce,
-      'Third handler was called only once'
+      'Third handler was called only once',
     );
 
     // trigger resize only on the first element
     resizeCallback([entries[0]], fakeObserver);
     assert.ok(
       this.resizeStub.calledTwice,
-      'First handler was called a second time'
+      'First handler was called a second time',
     );
     assert.notOk(
       this.resizeStub2.calledTwice,
-      'Second handler was not called a second time'
+      'Second handler was not called a second time',
     );
     assert.notOk(
       this.resizeStub3.calledTwice,
-      'Third handler was not called a second time'
+      'Third handler was not called a second time',
     );
   });
 
   test('element gets unobserved before removing from the DOM', async function (assert) {
     await render(
-      hbs`<div id='test-element' {{did-resize this.resizeStub}}></div>`
+      hbs`<div id='test-element' {{did-resize this.resizeStub}}></div>`,
     );
     let element = find('#test-element');
     await clearRender();
 
     assert.ok(
       unobserveStub.calledOnceWith(element),
-      'unobserve is called with the HTMLElement of the modifier'
+      'unobserve is called with the HTMLElement of the modifier',
     );
 
     let entry = { target: element };
@@ -170,7 +170,7 @@ module('Integration | Modifier | did-resize', function (hooks) {
     resizeCallback([entry], fakeObserver);
     assert.notOk(
       this.resizeStub.called,
-      'handler function is not called after element is removed from the DOM'
+      'handler function is not called after element is removed from the DOM',
     );
   });
 });
