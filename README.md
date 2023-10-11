@@ -14,7 +14,7 @@ We adhere to the [Ember Community Guidelines](https://emberjs.com/guidelines/) f
 
 * Ember.js v3.28 or above
 * Ember CLI v3.28 or above
-* Node.js v14 or above
+* Node.js v16 or above
 * [All N-1 browsers](https://caniuse.com/#search=resizeobserver)
 
 
