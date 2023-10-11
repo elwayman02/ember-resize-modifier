@@ -14,6 +14,31 @@ https://github.com/highlightjs/highlight.js/issues/2877
 
 
 
+
+## v0.7.1 (2023-10-11)
+
+#### :boom: Breaking Change
+* [#821](https://github.com/elwayman02/ember-resize-modifier/pull/821) Ember 5 Dependencies + Drop 3.28 Support ([@elwayman02](https://github.com/elwayman02))
+* [#822](https://github.com/elwayman02/ember-resize-modifier/pull/822) Ember 5 Partial Update + Drop Node 14 Support ([@elwayman02](https://github.com/elwayman02))
+
+#### :rocket: Enhancement
+* [#811](https://github.com/elwayman02/ember-resize-modifier/pull/811) Add ember-source 5 support ([@hexadecy](https://github.com/hexadecy))
+
+#### :bug: Bug Fix
+* [#817](https://github.com/elwayman02/ember-resize-modifier/pull/817) Embroider compatible with dynamic components ([@hexadecy](https://github.com/hexadecy))
+
+#### :house: Internal
+* [#821](https://github.com/elwayman02/ember-resize-modifier/pull/821) Ember 5 Dependencies + Drop 3.28 Support ([@elwayman02](https://github.com/elwayman02))
+* [#822](https://github.com/elwayman02/ember-resize-modifier/pull/822) Ember 5 Partial Update + Drop Node 14 Support ([@elwayman02](https://github.com/elwayman02))
+* [#820](https://github.com/elwayman02/ember-resize-modifier/pull/820) prettier v3 ([@elwayman02](https://github.com/elwayman02))
+* [#818](https://github.com/elwayman02/ember-resize-modifier/pull/818) ember-try v3 ([@elwayman02](https://github.com/elwayman02))
+* [#817](https://github.com/elwayman02/ember-resize-modifier/pull/817) Embroider compatible with dynamic components ([@hexadecy](https://github.com/hexadecy))
+
+#### Committers: 3
+- Jordan Hawker ([@elwayman02](https://github.com/elwayman02))
+- Michel Couillard ([@hexadecy](https://github.com/hexadecy))
+- Patrick Pircher ([@patricklx](https://github.com/patricklx))
+
 ## v0.6.0 (2023-01-04)
 
 #### :boom: Breaking Change
