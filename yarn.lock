@@ -12674,10 +12674,10 @@ qunit-dom@^3.1.1:
   resolved "https://registry.yarnpkg.com/qunit-dom/-/qunit-dom-3.1.1.tgz#7ea0ec76eade1a897f70f2ac13b75ce75c5aa792"
   integrity sha512-Ja2NK+LsQM4iDU5QFtkwbLEbETgr6+7wTf7t6DXW3hWhB6GmAtKA2r3eLnmXpSdncMnoBsedXSKfjM0iMTOUGQ==
 
-qunit@^2.20.1:
-  version "2.20.1"
-  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.20.1.tgz#280da17c258535f2c14520f018d2eec1191b20cf"
-  integrity sha512-scZfyhX8mmP3u/CN2y3CutQb+ppalbpqmm7g/X62M2yOt8ofzsxrRaC+MPmYm/tXxpzs9HGrVeCxZwLoP0tuAA==
+qunit@^2.21.0:
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/qunit/-/qunit-2.21.0.tgz#c3d35adb1c9df8176459665f2daf33170c0f8662"
+  integrity sha512-kJJ+uzx5xDWk0oRrbOZ3zsm+imPULE58ZMIrNl+3POZl4a1k6VXj2E4OiqTmZ9j6hh9egE3kNgnAti9Q+BG6Yw==
   dependencies:
     commander "7.2.0"
     node-watch "0.7.3"
