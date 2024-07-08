@@ -75,7 +75,7 @@
     "field-guide": "^2.4.0",
     "field-guide-default-template": "^3.0.0",
     "loader.js": "^4.7.0",
-    "prember": "^2.0.0",
+    "prember": "^2.1.0",
     "prettier": "^3.2.5",
     "qunit": "^2.20.1",
     "qunit-dom": "^3.1.1",
