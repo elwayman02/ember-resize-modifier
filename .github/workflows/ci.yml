@@ -22,7 +22,7 @@ jobs:
       - name: Install Node
         uses: volta-cli/action@v4
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Lint
         run: yarn lint
       - name: Run Tests
@@ -37,8 +37,10 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install Node
         uses: volta-cli/action@v4
+      - name: Yarn Upgrade
+        run: yarn upgrade
       - name: Install Dependencies
-        run: yarn install --no-lockfile
+        run: yarn install
       - name: Run Tests
         run: yarn test:ember
 
@@ -71,6 +73,6 @@ jobs:
       - name: Install Node
         uses: volta-cli/action@v4
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
