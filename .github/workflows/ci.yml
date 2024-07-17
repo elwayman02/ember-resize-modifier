@@ -47,8 +47,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: "test"
     timeout-minutes: 10
-    env:
-      YARN_ENABLE_HARDENED_MODE: 0
+#    env:
+#      YARN_ENABLE_HARDENED_MODE: 0
 
     strategy:
       fail-fast: false
