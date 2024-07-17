@@ -75,6 +75,11 @@
     "tracked-built-ins": "^3.3.0",
     "webpack": "^5.92.1"
   },
+  "dependenciesMeta": {
+    "ember-resize-modifier": {
+      "injected": true
+    }
+  },
   "engines": {
     "node": ">= 18"
   },
