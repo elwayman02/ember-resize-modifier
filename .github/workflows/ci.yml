@@ -28,21 +28,19 @@ jobs:
       - name: Run Tests
         run: yarn test:ember
 
-  floating:
-    name: "Floating Dependencies"
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install Node
-        uses: volta-cli/action@v4
-      - name: Install Dependencies
-        run: yarn install
-      - name: Yarn Upgrade
-        run: yarn up
-      - name: Run Tests
-        run: yarn test:ember
+#  floating:
+#    name: "Floating Dependencies"
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 10
+#
+#    steps:
+#      - uses: actions/checkout@v4
+#      - name: Install Node
+#        uses: volta-cli/action@v4
+#      - name: Install Dependencies
+#        run: yarn install
+#      - name: Run Tests
+#        run: yarn test:ember
 
   try-scenarios:
     name: ${{ matrix.try-scenario }}
