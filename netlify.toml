@@ -1,2 +1,2 @@
 [build]
-  base = "test-app/"
+  base = "docs-app/"

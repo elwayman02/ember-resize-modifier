@@ -18,6 +18,12 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+    'field-guide': {
+      name: 'Ember Resize Modifier',
+      copyright: 'Copyright (c) 2020 Jordan Hawker',
+      github: 'https://github.com/elwayman02/ember-resize-modifier',
+    },
   };
 
   if (environment === 'development') {
