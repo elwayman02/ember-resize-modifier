@@ -1,0 +1,3 @@
+packages:
+  - 'ember-resize-modifier'
+  - 'test-app'
