@@ -21,5 +21,16 @@
 /package-lock.json.ember-try
 /yarn.lock.ember-try
 
+# yarn@3 ignored files
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+# wrapper file to inject environment variables into yarn
+!.yarn/setup-env.cjs
+
 # broccoli-debug
 /DEBUG/
