@@ -7,7 +7,7 @@ module.exports = async function () {
   return {
     useYarn: true,
     buildManagerOptions() {
-      return ['--immutable'];
+      return [];
     },
     scenarios: [
       {
