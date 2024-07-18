@@ -1,0 +1,4 @@
+packages:
+  - 'ember-resize-modifier'
+  - 'test-app'
+  - 'docs-app'

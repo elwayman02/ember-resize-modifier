@@ -1,0 +1,9 @@
+.full-width {
+  width: 100%;
+}
+
+.box {
+  border: 1px dotted gray;
+  padding: 2px;
+  margin: 5px;
+}
