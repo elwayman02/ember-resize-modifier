@@ -132,8 +132,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-ember:
-        specifier: ^11.12.0
-        version: 11.12.0(eslint@8.57.0)
+        specifier: ^12.1.1
+        version: 12.1.1(@babel/core@7.24.9)(eslint@8.57.0)
       eslint-plugin-n:
         specifier: ^16.6.2
         version: 16.6.2(eslint@8.57.0)
@@ -226,7 +226,7 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-ember:
-        specifier: ^12.0.2
+        specifier: ^12.1.1
         version: 12.1.1(@babel/core@7.24.9)(eslint@8.57.0)
       eslint-plugin-import:
         specifier: ^2.29.1
@@ -358,8 +358,8 @@ importers:
         specifier: ^9.1.0
         version: 9.1.0(eslint@8.57.0)
       eslint-plugin-ember:
-        specifier: ^11.12.0
-        version: 11.12.0(eslint@8.57.0)
+        specifier: ^12.1.1
+        version: 12.1.1(@babel/core@7.24.9)(eslint@8.57.0)
       eslint-plugin-n:
         specifier: ^16.6.2
         version: 16.6.2(eslint@8.57.0)
@@ -3894,12 +3894,6 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
 
-  eslint-plugin-ember@11.12.0:
-    resolution: {integrity: sha512-7Ow1ky5JnRR0k3cxuvgYi4AWTe9DzGjlLgOJbU5VABLgr7Q0iq3ioC+YwAP79nV48cpw2HOgMgkZ1MynuIg59g==}
-    engines: {node: 14.* || 16.* || >= 18}
-    peerDependencies:
-      eslint: '>= 7'
-
   eslint-plugin-ember@12.1.1:
     resolution: {integrity: sha512-95YWz2nVWtFHwrNlW8kpBivudieTHkiW3vlG3X1P24IpQLigVtPe14LDcZ/vPtEV92Ccao4xcKPKWWOeG0hSNQ==}
     engines: {node: 18.* || 20.* || >= 21}
@@ -5455,9 +5449,6 @@ packages:
 
   magic-string@0.25.9:
     resolution: {integrity: sha512-RmF0AsMzgt25qzqqLc1+MbHmhdx0ojF2Fvs4XnOqz2ZOBXzzkEwc/dJQZCYHAn7v1jbVOjAZfK8msRn4BxO4VQ==}
-
-  magic-string@0.30.10:
-    resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
 
   make-dir@2.1.0:
     resolution: {integrity: sha512-LS9X+dc8KLxXCb8dni79fLIIUA5VyZoyjSMCwTluaXA0o27cCK0bhXkpgw+sTXVpPy/lSO57ilRixqk0vDmtRA==}
@@ -13041,25 +13032,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-ember@11.12.0(eslint@8.57.0):
-    dependencies:
-      '@ember-data/rfc395-data': 0.0.4
-      '@glimmer/syntax': 0.84.3
-      css-tree: 2.3.1
-      ember-rfc176-data: 0.3.18
-      ember-template-imports: 3.4.2
-      ember-template-recast: 6.1.4
-      eslint: 8.57.0
-      eslint-utils: 3.0.0(eslint@8.57.0)
-      estraverse: 5.3.0
-      lodash.camelcase: 4.3.0
-      lodash.kebabcase: 4.1.1
-      magic-string: 0.30.10
-      requireindex: 1.2.0
-      snake-case: 3.0.4
-    transitivePeerDependencies:
-      - supports-color
-
   eslint-plugin-ember@12.1.1(@babel/core@7.24.9)(eslint@8.57.0):
     dependencies:
       '@ember-data/rfc395-data': 0.0.4
@@ -15033,10 +15005,6 @@ snapshots:
   magic-string@0.25.9:
     dependencies:
       sourcemap-codec: 1.4.8
-
-  magic-string@0.30.10:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.0
 
   make-dir@2.1.0:
     dependencies:
