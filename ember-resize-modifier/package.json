@@ -37,7 +37,7 @@
     "ember-modifier": "^4.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.4",
+    "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
     "@babel/runtime": "^7.25.0",
     "@embroider/addon-dev": "^5.0.0",
