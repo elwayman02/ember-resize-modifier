@@ -39,8 +39,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       '@ember/test-helpers':
-        specifier: ^3.3.1
-        version: 3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0)
+        specifier: ^4.0.2
+        version: 4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))
       '@embroider/test-setup':
         specifier: ^3.0.1
         version: 3.0.3(@embroider/core@3.4.14)
@@ -91,7 +91,7 @@ importers:
         version: 4.0.2
       ember-data:
         specifier: ~5.3.8
-        version: 5.3.8(@ember/string@4.0.0)(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(@ember/test-waiters@3.1.0)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
+        version: 5.3.8(@ember/string@4.0.0)(@ember/test-helpers@4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(@ember/test-waiters@3.1.0)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
       ember-fetch:
         specifier: ^8.1.2
         version: 8.1.2
@@ -106,7 +106,7 @@ importers:
         version: 8.2.3(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))
       ember-qunit:
         specifier: ^8.1.0
-        version: 8.1.0(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
+        version: 8.1.0(@ember/test-helpers@4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
       ember-resize-modifier:
         specifier: workspace:*
         version: link:../ember-resize-modifier
@@ -268,8 +268,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0
       '@ember/test-helpers':
-        specifier: ^3.3.1
-        version: 3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0)
+        specifier: ^4.0.2
+        version: 4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))
       '@embroider/test-setup':
         specifier: ^3.0.1
         version: 3.0.3(@embroider/core@3.4.14)
@@ -317,7 +317,7 @@ importers:
         version: 4.0.2
       ember-data:
         specifier: ~5.3.8
-        version: 5.3.8(@ember/string@4.0.0)(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(@ember/test-waiters@3.1.0)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
+        version: 5.3.8(@ember/string@4.0.0)(@ember/test-helpers@4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(@ember/test-waiters@3.1.0)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
       ember-fetch:
         specifier: ^8.1.2
         version: 8.1.2
@@ -332,7 +332,7 @@ importers:
         version: 8.2.3(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))
       ember-qunit:
         specifier: ^8.1.0
-        version: 8.1.0(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
+        version: 8.1.0(@ember/test-helpers@4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0)
       ember-resize-modifier:
         specifier: workspace:*
         version: file:ember-resize-modifier(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))
@@ -1239,11 +1239,10 @@ packages:
   '@ember/string@4.0.0':
     resolution: {integrity: sha512-IMVyVE72twuAMSYcHzWSgtgYTtzlHlKSGW8vEbztnnmkU6uo7kVHmiqSN9R4RkBhzvh0VD4G76Eph+55t3iNIA==}
 
-  '@ember/test-helpers@3.3.1':
-    resolution: {integrity: sha512-h4uFBy4pquBtHsHI+tx9S0wtMmn1L+8dkXiDiyoqG1+3e0Awk6GBujiFM9s4ANq6wC8uIhC3wEFyts10h2OAoQ==}
-    engines: {node: 16.* || >= 18}
+  '@ember/test-helpers@4.0.2':
+    resolution: {integrity: sha512-9vV5nDx1ZzmTmexzTudRk9M04JY6mqB3NxJB116vkjGQWIRTgiAVUgBkFIudRXvX1QiOGTo6IPxQRXZRS+v28w==}
     peerDependencies:
-      ember-source: ^4.0.0 || ^5.0.0
+      ember-source: '>= 4.0.0'
 
   '@ember/test-waiters@3.1.0':
     resolution: {integrity: sha512-bb9h95ktG2wKY9+ja1sdsFBdOms2lB19VWs8wmNpzgHv1NCetonBoV5jHBV4DHt0uS1tg9z66cZqhUVlYs96KQ==}
@@ -8793,23 +8792,19 @@ snapshots:
 
   '@ember/string@4.0.0': {}
 
-  '@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0)':
+  '@ember/test-helpers@4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))':
     dependencies:
       '@ember/test-waiters': 3.1.0
+      '@embroider/addon-shim': 1.8.9
       '@embroider/macros': 1.16.5
       '@simple-dom/interface': 1.4.0
-      broccoli-debug: 0.6.5
-      broccoli-funnel: 3.0.8
+      decorator-transforms: 2.0.0(@babel/core@7.25.2)
       dom-element-descriptors: 0.5.1
-      ember-auto-import: 2.7.4(webpack@5.93.0)
-      ember-cli-babel: 8.2.0(@babel/core@7.25.2)
-      ember-cli-htmlbars: 6.3.0
       ember-source: 5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@glint/template'
       - supports-color
-      - webpack
 
   '@ember/test-waiters@3.1.0':
     dependencies:
@@ -12288,7 +12283,7 @@ snapshots:
       - '@babel/core'
       - supports-color
 
-  ember-data@5.3.8(@ember/string@4.0.0)(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(@ember/test-waiters@3.1.0)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0):
+  ember-data@5.3.8(@ember/string@4.0.0)(@ember/test-helpers@4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(@ember/test-waiters@3.1.0)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0):
     dependencies:
       '@ember-data/adapter': 5.3.8(@ember-data/legacy-compat@5.3.8(gxgir6kiw6gntfsxwfdq4pyrge))(@ember-data/request-utils@5.3.8(@ember/string@4.0.0)(@warp-drive/core-types@0.0.0-beta.11))(@ember-data/store@5.3.8(@ember-data/request-utils@5.3.8(@ember/string@4.0.0)(@warp-drive/core-types@0.0.0-beta.11))(@ember-data/request@5.3.8(@warp-drive/core-types@0.0.0-beta.11))(@ember-data/tracking@5.3.8(@warp-drive/core-types@0.0.0-beta.11)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(@warp-drive/core-types@0.0.0-beta.11))(@warp-drive/core-types@0.0.0-beta.11)
       '@ember-data/debug': 5.3.8(@ember-data/model@5.3.8(pau4ilqniffr2s7wzy2ihce65a))(@ember-data/request-utils@5.3.8(@ember/string@4.0.0)(@warp-drive/core-types@0.0.0-beta.11))(@ember-data/store@5.3.8(@ember-data/request-utils@5.3.8(@ember/string@4.0.0)(@warp-drive/core-types@0.0.0-beta.11))(@ember-data/request@5.3.8(@warp-drive/core-types@0.0.0-beta.11))(@ember-data/tracking@5.3.8(@warp-drive/core-types@0.0.0-beta.11)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(@warp-drive/core-types@0.0.0-beta.11))(@warp-drive/core-types@0.0.0-beta.11)
@@ -12306,7 +12301,7 @@ snapshots:
       '@warp-drive/build-config': 0.0.0-beta.6
       '@warp-drive/core-types': 0.0.0-beta.11
     optionalDependencies:
-      '@ember/test-helpers': 3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0)
+      '@ember/test-helpers': 4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))
       '@ember/test-waiters': 3.1.0
       qunit: 2.22.0
     transitivePeerDependencies:
@@ -12447,9 +12442,9 @@ snapshots:
       - webpack-cli
       - webpack-command
 
-  ember-qunit@8.1.0(@ember/test-helpers@3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0))(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0):
+  ember-qunit@8.1.0(@ember/test-helpers@4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0)))(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(qunit@2.22.0):
     dependencies:
-      '@ember/test-helpers': 3.3.1(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))(webpack@5.93.0)
+      '@ember/test-helpers': 4.0.2(@babel/core@7.25.2)(ember-source@5.10.2(@glimmer/component@1.1.2(@babel/core@7.25.2))(rsvp@4.8.5)(webpack@5.93.0))
       '@embroider/addon-shim': 1.8.9
       '@embroider/macros': 1.16.5
       ember-cli-test-loader: 3.1.0
