@@ -39,7 +39,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/eslint-parser": "^7.25.1",
-    "@babel/runtime": "^7.25.6",
+    "@babel/runtime": "^7.25.7",
     "@embroider/addon-dev": "^5.0.0",
     "@rollup/plugin-babel": "^6.0.4",
     "babel-plugin-ember-template-compilation": "^2.3.0",
