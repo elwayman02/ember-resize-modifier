@@ -1,13 +1,19 @@
 {
   "name": "ember-resize-modifier",
   "version": "1.0.0",
-  "description": "The default blueprint for Embroider v2 addons.",
+  "description": "Resize Modifier for Ember.js Applications using ResizeObserver",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "modifier",
+    "modifiers",
+    "resize"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elwayman02/ember-resize-modifier.git"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "Jordan Hawker <hawker.jordan@gmail.com> (http://www.JordanHawker.com)",
   "exports": {
     ".": "./dist/index.js",
     "./*": "./dist/*.js",
