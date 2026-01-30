@@ -1,5 +1,20 @@
 # Changelog
 
+## Release (2026-01-30)
+
+* ember-resize-modifier 1.0.0 (major)
+
+#### :boom: Breaking Change
+* `ember-resize-modifier`
+  * [#967](https://github.com/elwayman02/ember-resize-modifier/pull/967) convert addon to v2 ([@mansona](https://github.com/mansona))
+
+#### :house: Internal
+* [#1042](https://github.com/elwayman02/ember-resize-modifier/pull/1042) Add release-plan ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 2
+- Chris Manson ([@mansona](https://github.com/mansona))
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
 ## v0.7.1 (2023-10-11)
 
 #### :boom: Breaking Change

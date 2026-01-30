@@ -1,0 +1,18 @@
+{
+  "solution": {
+    "ember-resize-modifier": {
+      "impact": "major",
+      "oldVersion": "0.0.0",
+      "newVersion": "1.0.0",
+      "tagName": "latest",
+      "constraints": [
+        {
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        }
+      ],
+      "pkgJSONPath": "./ember-resize-modifier/package.json"
+    }
+  },
+  "description": "## Release (2026-01-30)\n\n* ember-resize-modifier 1.0.0 (major)\n\n#### :boom: Breaking Change\n* `ember-resize-modifier`\n  * [#967](https://github.com/elwayman02/ember-resize-modifier/pull/967) convert addon to v2 ([@mansona](https://github.com/mansona))\n\n#### :house: Internal\n* [#1042](https://github.com/elwayman02/ember-resize-modifier/pull/1042) Add release-plan ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 2\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
+}
