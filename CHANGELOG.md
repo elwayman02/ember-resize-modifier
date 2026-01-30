@@ -2,6 +2,17 @@
 
 ## Release (2026-01-30)
 
+* ember-resize-modifier 1.0.1 (patch)
+
+#### :house: Internal
+* `ember-resize-modifier`
+  * [#1045](https://github.com/elwayman02/ember-resize-modifier/pull/1045) Add back missing info ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+#### Committers: 1
+- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))
+
+## Release (2026-01-30)
+
 * ember-resize-modifier 1.0.0 (major)
 
 #### :boom: Breaking Change
