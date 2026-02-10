@@ -1,5 +1,10 @@
 # Changelog
 
+
+
+
+
+
 ## Release (2026-01-30)
 
 * ember-resize-modifier 1.0.1 (patch)
