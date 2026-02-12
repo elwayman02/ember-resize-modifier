@@ -13,19 +13,16 @@
 
 ## Building the addon
 
-- `cd ember-resize-modifier`
 - `pnpm build`
 
 ## Running tests
 
-- `cd test-app`
-- `pnpm test` – Runs the test suite on the current Ember version
-- `pnpm test:watch` – Runs the test suite in "watch mode"
+- `pnpm test` – Runs the test suite
 
-## Running the test application
+## Running the development server
 
-- `cd test-app`
-- `pnpm start`
-- Visit the test application at [http://localhost:4200](http://localhost:4200).
+- `pnpm start` – Starts the demo app with Vite
 
-For more information on using ember-cli, visit [https://cli.emberjs.com/release/](https://cli.emberjs.com/release/).
+## Running the docs site
+
+- `pnpm start:docs` – Starts the VitePress documentation site

@@ -1,0 +1,17 @@
+{
+  "config": {
+    "default": true,
+    // Allow HTML in markdown (needed for VitePress components)
+    "MD033": false,
+    // Allow duplicate headings in different sections
+    "MD024": { "siblings_only": true },
+    // Allow inline HTML
+    "MD013": false,
+    // Allow bare URLs
+    "MD034": false,
+    // Disable table column style (false positives with escaped pipes in cells)
+    "MD060": false,
+  },
+  "customRules": [],
+  "ignores": ["node_modules/", ".vitepress/dist/", ".vitepress/cache/"],
+}
