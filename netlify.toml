@@ -1,2 +1,12 @@
 [build]
-  base = "docs-app/"
+  base = "docs"
+  command = "cd .. && pnpm install --frozen-lockfile && pnpm --filter docs build"
+  publish = ".vitepress/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

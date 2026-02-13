@@ -1,4 +1,8 @@
+
+autoInstallPeers: false
+resolvePeersFromWorkspaceRoot: false
+
+verifyDepsBeforeRun: install
+
 packages:
-  - 'ember-resize-modifier'
-  - 'test-app'
-  - 'docs-app'
+  - 'docs'
