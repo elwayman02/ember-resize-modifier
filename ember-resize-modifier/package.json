@@ -46,7 +46,7 @@
     "@babel/core": "^7.25.7",
     "@babel/eslint-parser": "^7.25.7",
     "@babel/runtime": "^7.26.10",
-    "@embroider/addon-dev": "^6.0.0",
+    "@embroider/addon-dev": "^8.3.0",
     "@rollup/plugin-babel": "^6.1.0",
     "babel-plugin-ember-template-compilation": "^2.3.0",
     "concurrently": "^9.0.1",
