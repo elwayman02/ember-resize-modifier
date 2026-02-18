@@ -1,5 +1,22 @@
 # Changelog
 
+## Release (2026-02-18)
+
+* ember-resize-modifier 1.1.0 (minor)
+
+#### :rocket: Enhancement
+* `ember-resize-modifier`
+  * [#1067](https://github.com/elwayman02/ember-resize-modifier/pull/1067) feat: migrate to addon-blueprint v0.17.0 ([@aklkv](https://github.com/aklkv))
+
+#### :house: Internal
+* `ember-resize-modifier`
+  * [#1088](https://github.com/elwayman02/ember-resize-modifier/pull/1088) Add current directory to pnpm workspace packages ([@aklkv](https://github.com/aklkv))
+  * [#1085](https://github.com/elwayman02/ember-resize-modifier/pull/1085) fix: release-plan ([@aklkv](https://github.com/aklkv))
+  * [#1083](https://github.com/elwayman02/ember-resize-modifier/pull/1083) Update pkgJSONPath in release plan ([@aklkv](https://github.com/aklkv))
+
+#### Committers: 1
+- Alexey Kulakov ([@aklkv](https://github.com/aklkv))
+
 ## Release (2026-01-30)
 
 * ember-resize-modifier 1.0.1 (patch)
