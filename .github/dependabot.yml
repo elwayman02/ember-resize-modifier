@@ -9,3 +9,12 @@ updates:
   versioning-strategy: increase
   commit-message:
     prefix: "[skip netlify]"
+- package-ecosystem: npm
+  directory: "/docs"
+  schedule:
+    interval: weekly
+    time: "13:00"
+  open-pull-requests-limit: 5
+  versioning-strategy: increase
+  commit-message:
+    prefix: "[skip netlify]"

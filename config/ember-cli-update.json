@@ -3,15 +3,16 @@
   "projectName": "ember-resize-modifier",
   "packages": [
     {
-      "name": "@embroider/addon-blueprint",
-      "version": "2.17.0",
+      "name": "@ember/addon-blueprint",
+      "version": "0.17.0",
       "blueprints": [
         {
-          "name": "@embroider/addon-blueprint",
+          "name": "@ember/addon-blueprint",
           "isBaseBlueprint": true,
           "options": [
             "--ci-provider=github",
-            "--pnpm"
+            "--pnpm",
+            "--typescript"
           ]
         }
       ]
