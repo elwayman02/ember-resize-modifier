@@ -181,8 +181,8 @@ importers:
         specifier: ^0.21.0
         version: 0.21.0
       vite-plugin-ember:
-        specifier: ^0.3.0
-        version: 0.3.0(@glimmer/component@2.0.0)(ember-source@6.11.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(vite@5.4.21(@types/node@25.2.1)(terser@5.46.0))(vitepress@1.6.4(@algolia/client-search@5.48.0)(@types/node@25.2.1)(fuse.js@7.0.0)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.46.0)(typescript@5.9.3))(vue@3.5.28(typescript@5.9.3))
+        specifier: ^0.3.1
+        version: 0.3.1(@glimmer/component@2.0.0)(ember-source@6.11.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(vite@5.4.21(@types/node@25.2.1)(terser@5.46.0))(vitepress@1.6.4(@algolia/client-search@5.48.0)(@types/node@25.2.1)(fuse.js@7.0.0)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.46.0)(typescript@5.9.3))(vue@3.5.28(typescript@5.9.3))
       vitepress:
         specifier: ^1.6.4
         version: 1.6.4(@algolia/client-search@5.48.0)(@types/node@25.2.1)(fuse.js@7.0.0)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.46.0)(typescript@5.9.3)
@@ -2775,8 +2775,8 @@ packages:
     resolution: {integrity: sha512-FveZTNuGw04cxlAiWbzi6zTAL/lhehaWbTtgluJh4/E95DqMwTmha3KZN1aAWA8cFIhHzMZUvLevkw5Rqk+tSQ==}
     engines: {node: '>= 0.6'}
 
-  content-tag@2.0.1:
-    resolution: {integrity: sha512-jxsETSDs5NbNwyiDuIp672fUMhUyu8Qxc5MOBOJOcgW/fQESI6o5K1LBDrnEE7Bh810a685lWEZHTF4jQYGEEw==}
+  content-tag@2.0.3:
+    resolution: {integrity: sha512-htLIdtfhhKW2fHlFLnZH7GFzHSdSpHhDLrWVswkNiiPMZ5uXq5JfrGboQKFhNQuAAFF8VNB2EYUj3MsdJrKKpg==}
 
   content-tag@3.1.3:
     resolution: {integrity: sha512-4Kiv9mEroxuMXfWUNUHcljVJgxThCNk7eEswdHMXdzJnkBBaYDqDwzHkoh3F74JJhfU3taJOsgpR6oEGIDg17g==}
@@ -5924,8 +5924,8 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite-plugin-ember@0.3.0:
-    resolution: {integrity: sha512-UmSaGgtCBSDT8Gs/MVgjMus62uKyaTUkuMsKwmXZ4AKVD/hNeXYRd61Ekv6ssXOxgDYem14mnksO7OIKubpGOA==}
+  vite-plugin-ember@0.3.1:
+    resolution: {integrity: sha512-xlwNgSFAkc+dVDHyqk0ehnmq7n/aB7JbUUuuev324OgReiKBCVTQEpy51jGR0ccfk+2PrqsF5vJ1+E2avwMK2Q==}
     peerDependencies:
       '@glimmer/component': '>=1'
       ember-source: '>=5'
@@ -9257,7 +9257,7 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  content-tag@2.0.1: {}
+  content-tag@2.0.3: {}
 
   content-tag@3.1.3: {}
 
@@ -9515,7 +9515,7 @@ snapshots:
       '@babel/eslint-parser': 7.28.6(@babel/core@7.29.0)(eslint@9.39.2(jiti@2.6.1))
       '@glimmer/syntax': 0.95.0
       '@typescript-eslint/tsconfig-utils': 8.55.0(typescript@5.9.3)
-      content-tag: 2.0.1
+      content-tag: 2.0.3
       eslint-scope: 7.2.2
       html-tags: 3.3.1
       mathml-tag-names: 2.1.3
@@ -13113,7 +13113,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite-plugin-ember@0.3.0(@glimmer/component@2.0.0)(ember-source@6.11.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(vite@5.4.21(@types/node@25.2.1)(terser@5.46.0))(vitepress@1.6.4(@algolia/client-search@5.48.0)(@types/node@25.2.1)(fuse.js@7.0.0)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.46.0)(typescript@5.9.3))(vue@3.5.28(typescript@5.9.3)):
+  vite-plugin-ember@0.3.1(@glimmer/component@2.0.0)(ember-source@6.11.0(@glimmer/component@2.0.0)(rsvp@4.8.5))(vite@5.4.21(@types/node@25.2.1)(terser@5.46.0))(vitepress@1.6.4(@algolia/client-search@5.48.0)(@types/node@25.2.1)(fuse.js@7.0.0)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.46.0)(typescript@5.9.3))(vue@3.5.28(typescript@5.9.3)):
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-typescript': 7.28.6(@babel/core@7.29.0)
