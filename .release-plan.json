@@ -1,18 +1,8 @@
 {
   "solution": {
     "ember-resize-modifier": {
-      "impact": "patch",
-      "oldVersion": "1.0.0",
-      "newVersion": "1.0.1",
-      "tagName": "latest",
-      "constraints": [
-        {
-          "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
-        }
-      ],
-      "pkgJSONPath": "./package.json"
+      "oldVersion": "1.0.1"
     }
   },
-  "description": "## Release (2026-01-30)\n\n* ember-resize-modifier 1.0.1 (patch)\n\n#### :house: Internal\n* `ember-resize-modifier`\n  * [#1045](https://github.com/elwayman02/ember-resize-modifier/pull/1045) Add back missing info ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n\n#### Committers: 1\n- Robbie Wagner ([@RobbieTheWagner](https://github.com/RobbieTheWagner))\n"
+  "description": "## Release (2026-02-18)\n\n\n\n#### :rocket: Enhancement\n* [#1067](https://github.com/elwayman02/ember-resize-modifier/pull/1067) feat: migrate to addon-blueprint v0.17.0 ([@aklkv](https://github.com/aklkv))\n\n#### :house: Internal\n* [#1083](https://github.com/elwayman02/ember-resize-modifier/pull/1083) Update pkgJSONPath in release plan ([@aklkv](https://github.com/aklkv))\n\n#### Committers: 1\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n"
 }
