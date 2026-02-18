@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "ember-resize-modifier": {
+      "oldVersion": "1.0.1"
+    }
+  },
+  "description": "## Release (2026-02-18)\n\n\n\n#### :rocket: Enhancement\n* [#1067](https://github.com/elwayman02/ember-resize-modifier/pull/1067) feat: migrate to addon-blueprint v0.17.0 ([@aklkv](https://github.com/aklkv))\n\n#### :house: Internal\n* [#1085](https://github.com/elwayman02/ember-resize-modifier/pull/1085) fix: release-plan ([@aklkv](https://github.com/aklkv))\n* [#1083](https://github.com/elwayman02/ember-resize-modifier/pull/1083) Update pkgJSONPath in release plan ([@aklkv](https://github.com/aklkv))\n\n#### Committers: 1\n- Alexey Kulakov ([@aklkv](https://github.com/aklkv))\n"
+}
