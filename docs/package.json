@@ -19,7 +19,7 @@
     "concurrently": "^9.2.1",
     "ember-modifier": "^4.3.0",
     "ember-resize-modifier": "workspace:*",
-    "ember-source": "^6.10.1",
+    "ember-source": "^6.11.0",
     "markdownlint-cli2": "^0.21.0",
     "vite-plugin-ember": "^0.3.0",
     "vitepress": "^1.6.4",
